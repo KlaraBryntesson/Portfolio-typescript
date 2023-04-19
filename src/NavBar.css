@@ -1,0 +1,98 @@
+.NavBar-navbar {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.NavBar-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.NavBar-toggle-container {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 30%;
+}
+
+.NavBar-list {
+  font-size: calc(90% + 0.2vw);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.NavBar-links {
+  transition: 0.5s ease-in-out;
+}
+
+.NavBar-links:hover {
+  color: rgb(254, 105, 5);
+  font-style: oblique;
+}
+
+.NavBar-navbar-left {
+  padding-left: 40px;
+  position: fixed;
+  height: 90vh;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NavBar-icons {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 250px;
+}
+
+.NavBar-bi {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  color: inherit;
+  transition: 0.3s ease-in-out;
+}
+
+.NavBar-bi:hover {
+  color: rgb(254, 105, 5);
+}
+
+.NavBar-year {
+  margin-bottom: 50px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  nav {
+    width: 50%;
+  }
+
+  .NavBar-top {
+    height: 70px;
+  }
+
+  .NavBar-navbar-left {
+    width: 60px;
+    padding-left: 25px;
+  }
+
+  .NavBar-toggle-container {
+    top: 10px;
+  }
+}

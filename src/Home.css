@@ -1,0 +1,56 @@
+/* Testade en scroll-animation som jag skrotade.. */
+
+/* .Home-skill-container {
+  padding: 10px;
+  background-color: orange;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 3rem;
+} */
+
+/* .Home-skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  margin-right: 50px;
+}
+
+.Home-skill-primary {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(0);
+  animation: scroll-animation 20s linear infinite;
+}
+
+.Home-skill-secondary {
+  animation: secondary 20s linear infinite;
+  position: absolute;
+  top: 0%;
+  left: 200%;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(0);
+} */
+
+/* @keyframes scroll-animation {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -490%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 490%;
+  }
+  to {
+    left: 0%;
+  }
+} */
