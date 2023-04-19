@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c82be161.css",
+    "main.js": "/static/js/main.420a416b.js",
+    "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
+    "static/media/Montserrat-Light.ttf": "/static/media/Montserrat-Light.6fcc9263a21be961d246.ttf",
+    "static/media/FontsFree-Net-NewYork.ttf": "/static/media/FontsFree-Net-NewYork.57afb0600f0b9ce8a9a5.ttf",
+    "index.html": "/index.html",
+    "main.c82be161.css.map": "/static/css/main.c82be161.css.map",
+    "main.420a416b.js.map": "/static/js/main.420a416b.js.map",
+    "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c82be161.css",
+    "static/js/main.420a416b.js"
+  ]
+}
