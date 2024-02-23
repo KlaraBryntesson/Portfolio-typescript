@@ -129,22 +129,6 @@ const Card = styled.div<CardProps>`
     width: 90%;
     min-width: 250px;
     height: 250px;
-
-    /* &:hover {
-      background-image: url(${(props) => props.image});
-      opacity: 0.75;
-      background-size: cover;
-      background-repeat: no-repeat;
-      animation: backGroundImage 0.5s linear; */
-
-    /* .WorkList-container {
-        visibility: hidden;
-      } */
-
-    /* h3 {
-        visibility: hidden;
-      } */
-    /* } */
   }
 `;
 
