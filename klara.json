@@ -7,11 +7,7 @@
       "email": "k_bryntesson@hotmail.com",
       "github": "https://github.com/KlaraBryntesson",
       "linkedin": "https://linkedin.com/in/klarabryntesson/",
-      "image": [
-        "/images/IMG_1215.jpg",
-        "/images/helen-unsplash.jpg",
-        "/images/IMG_2116.png"
-      ]
+      "image": ["/images/IMG_1215.jpg"]
     },
     "misc": {
       "bio": "I am a dedicated and enthusiastic frontend developer student with a passion for creating intuitive and visually appealing user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I constantly want to expanding my skillset and explore new frameworks and technologies to stay on the cutting edge of web development.",
@@ -28,30 +24,73 @@
       "important": "Information som aktuell just nu",
       "skills": [
         "HTML",
-        "JavaScript",
         "CSS",
         "UX/UI-Design",
         "Vue.js",
-        "Agile development",
         "VITE",
         "Typescript",
         "React",
         "Node.js",
-        "Git"
+        "Git",
+        "Headless CMS",
+        "Wordpress",
+        "Express",
+        "GraphQL",
+        "Databases",
+        "Agile development"
       ]
     }
   },
 
   "work": [
     {
-      "id": "fomobar",
-      "name": "Fomo Bar",
-      "shortdescription": "Project using only HTML and CSS",
-      "description": "This is the first project I did at IT-Högskolan only a few weeks into my studies. Using only HTML and CSS, I created a website for a bar to implement the different types of elements and styling that I had learnt so far",
-      "image": "/images/fomobar.png",
-      "url": "/fomobar",
-      "languages": ["HTML", "CSS"],
+      "id": "CMSportfolio",
+      "name": "Portfolio",
+      "shortdescription": "Portfolio created using Contenful and Gatsby",
+      "description": "This portfolio was created using Contenful Gatsby to develop skills in Headless CMS and GraphQL.",
+      "image": "/images/portfolio.png",
+      "url": "https://klarabryntesson.netlify.app/",
+      "languages": [
+        "HTML",
+        "CSS",
+        "Typescript",
+        "React",
+        "Contenful",
+        "GraphQL",
+        "Node.js"
+      ],
       "participants": null
+    },
+    {
+      "id": "urbangreens",
+      "name": "Urban Greens",
+      "shortdescription": "Group-project creating a mockup API and fetching using Vue.js and VITE",
+      "description": "A group project created during four weeks in combination with working in an agile team with two week sprints. For this project, we made our own mockup API using json to fetch from. We also implemented a login function using Vuex and Vuex persist to make the user information persist on that specific device. This was the closest thing to using a backend that we could get. This project experiments with a few different npm packages to get to know their functions and usages",
+      "image": "/images/urbangreens.png",
+      "url": "/urbangreens",
+      "languages": ["Javascript", "Vue", "VITE", "Bootstrap", "Node.js", "Git"],
+      "participants": [
+        "Ellinor Sahberg",
+        "Isabell Leosson",
+        "Sanna Asp",
+        "Tove Karlström"
+      ]
+    },
+    {
+      "id": "eventer",
+      "name": "Eventer",
+      "shortdescription": "Group-project together with both frontend developers and UX designers",
+      "description": "This project was a joint effort with teams of frontend developers and UX designers to create and deploy a web application using both backend and frontend.",
+      "image": "/images/eventer.png",
+      "url": "https://eventer.onrender.com/",
+      "languages": ["Typescript", "React", "Express", "PostgreSQL"],
+      "participants": [
+        "Anna Petersson",
+        "Ellen Persson",
+        "Leo Söderberg",
+        "Sam Ebadeh",
+        "Sandra Jakobsson"
+      ]
     },
     {
       "id": "beerlibrary",
@@ -60,7 +99,7 @@
       "description": "This project was based on using an API to fetch information from. Fetching from Punk API, I decided to do a beer library to render the information from the API. In this project, there was a need to use Chart.js to display some of the information from the website. I also used an API provided by our teacher to render and use PUT, PATCH and DELETE to modify the information",
       "image": "/images/beerlibrary.png",
       "url": "/beerlibrary",
-      "languages": ["HTML", "CSS", "Native Javascript"],
+      "languages": ["HTML", "CSS", "Javascript"],
       "participants": null
     },
     {
@@ -74,27 +113,14 @@
       "participants": null
     },
     {
-      "id": "urbangreens",
-      "name": "Urban Greens",
-      "shortdescription": "Group-project creating a mockup API and fetching using Vue.js and VITE",
-      "description": "A group project created during four weeks in combination with working in an agile team with two week sprints. For this project, we made our own mockup API using json to fetch from. We also implemented a login function using Vuex and Vuex persist to make the user information persist on that specific device. This was the closest thing to using a backend that we could get. This project experiments with a few different npm packages to get to know their functions and usages",
-      "image": "/images/urbangreens.png",
-      "url": "/urbangreens",
-      "languages": [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Vue",
-        "VITE",
-        "Node.js",
-        "Git"
-      ],
-      "participants": [
-        "Ellinor Sahberg",
-        "Isabell Leosson",
-        "Sanna Asp",
-        "Tove Karlström"
-      ]
+      "id": "fomobar",
+      "name": "Fomo Bar",
+      "shortdescription": "Project using only HTML and CSS",
+      "description": "This is the first project I did at IT-Högskolan only a few weeks into my studies. Using only HTML and CSS, I created a website for a bar to implement the different types of elements and styling that I had learnt so far",
+      "image": "/images/fomobar.png",
+      "url": "/fomobar",
+      "languages": ["HTML", "CSS"],
+      "participants": null
     }
   ],
   "blog": [
