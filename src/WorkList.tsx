@@ -44,12 +44,13 @@ WorkList.propTypes = {
 
 const Cards = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  overflow-x: scroll;
   width: 100%;
 
-  @media (max-width: 1349px) {
+  /* @media (max-width: 1349px) {
     width: 70%;
-  }
+  } */
 
   @media (max-width: 1007px) {
     width: 100%;
@@ -70,24 +71,26 @@ const Card = styled.div<CardProps>`
   aspect-ratio: 1 / 1;
   margin-right: 20px;
   margin-bottom: 20px;
+  position: relative;
+  transition: 0.3s ease-in-out;
 
   .WorkList-container {
-    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: 0.3s ease-in-out;
   }
 
   h3 {
-    visibility: visible;
+    opacity: 1;
   }
 
   &:hover {
     .WorkList-container {
-      visibility: visible;
-      position: absolute;
       aspect-ratio: 1;
       background-image: url(${(props) => props.image});
       opacity: 0.75;
-      height: 280px;
-      width: 280px;
+      height: 100%;
+      width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
       animation: backGroundImage 0.5s linear;
@@ -104,7 +107,8 @@ const Card = styled.div<CardProps>`
     }
 
     h3 {
-      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
     }
   }
 
@@ -126,21 +130,21 @@ const Card = styled.div<CardProps>`
     min-width: 250px;
     height: 250px;
 
-    &:hover {
+    /* &:hover {
       background-image: url(${(props) => props.image});
       opacity: 0.75;
       background-size: cover;
       background-repeat: no-repeat;
-      animation: backGroundImage 0.5s linear;
+      animation: backGroundImage 0.5s linear; */
 
-      .WorkList-container {
+    /* .WorkList-container {
         visibility: hidden;
-      }
+      } */
 
-      h3 {
+    /* h3 {
         visibility: hidden;
-      }
-    }
+      } */
+    /* } */
   }
 `;
 

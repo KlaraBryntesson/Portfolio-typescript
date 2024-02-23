@@ -9,15 +9,6 @@ import { AnimatePresence, easeInOut, motion } from 'framer-motion';
 function AboutView() {
   const details = useContext(SomeContext)?.details,
     misc = useContext(SomeContext)?.misc;
-  // ---Tänkte ha med min ålder, men skippade :) ---
-  // const [years, setYears] = useState("");
-
-  // useEffect(() => {
-  //   if (details) {
-  //     const diffYears = moment().diff(details.age, "years") * 1;
-  //     setYears(diffYears.toString());
-  //   }
-  // }, [details]);
 
   return (
     <AnimatePresence mode='wait'>
@@ -35,7 +26,7 @@ function AboutView() {
             </div>
           </HeaderDiv>
           <AboutDiv>
-            {misc && misc !== null && (
+            {misc && (
               <div>
                 <IntroParagraph>{misc.introdescription}</IntroParagraph>
                 {misc.description.map((paragraph, index) => (
@@ -43,23 +34,21 @@ function AboutView() {
                 ))}
               </div>
             )}
-            {details && details !== null && (
+            {details && (
               <ImageDiv>
                 <img alt='Klara' src={details.image[0]}></img>
                 <SkillDiv>
-                  {misc && misc !== null && (
+                  {misc && (
                     <ul>
                       {misc.skills.map((skill) => (
-                        <li key={skill}>/ {skill} </li>
+                        <li key={skill}>
+                          <span>|</span>
+                          {skill}
+                        </li>
                       ))}
                     </ul>
                   )}
                 </SkillDiv>
-                {/* <h2>{details.name}</h2> */}
-                {/* {years !== "" && <p>{years} years</p>}
-            <ul>
-              <li>{details.email}</li>
-            </ul> */}
               </ImageDiv>
             )}
           </AboutDiv>
@@ -100,8 +89,6 @@ const AboutDiv = styled.div`
 
   p:nth-child(4),
   p:nth-child(7) {
-    /* font-size: 1.3rem; */
-    /* font-size: 1.7vw; */
     font-size: calc(90% + 0.7vw);
     font-family: NewYork, serif;
   }
@@ -119,18 +106,21 @@ const AboutDiv = styled.div`
     margin-top: 20px;
 
     div {
+      padding-right: 50px;
       width: 100%;
     }
   }
 
   @media (max-width: 400px) {
     flex-direction: column-reverse;
+
+    div {
+      padding-right: 30px;
+    }
   }
 `;
 
 const IntroParagraph = styled.p`
-  /* font-size: 2rem; */
-  /* font-size: 2.3vw; */
   font-size: calc(90% + 1.2vw);
   font-family: NewYork, serif;
 `;
@@ -140,10 +130,15 @@ const ImageDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
   }
 
   @media (max-width: 800px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 0;
   }
 `;
 
@@ -153,19 +148,42 @@ const SkillDiv = styled.div`
 
   ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    /* flex-direction: column;
+    align-items: flex-end; */
   }
 
   li {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: calc(80% + 0.6vw);
     font-weight: bold;
+    margin: 10px 5px;
+  }
+
+  span {
+    margin-right: 10px;
   }
 
   @media (max-width: 1000px) {
     padding-left: 20px !important;
+    width: 50% !important;
     ul {
+      flex-direction: column;
       align-items: flex-start;
+    }
+    li {
+      font-size: calc(80% + 0.3vw);
+    }
+  }
+  @media (max-width: 800px) {
+    padding-left: 0 !important;
+    width: 100% !important;
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 

@@ -95,32 +95,9 @@ function Home() {
                 </motion.div>
               </AnimatePresence>
             )}
-
-            {/* {details && details !== null && (
-              <img alt='Klara-home' src={details.image[0]}></img>
-            )} */}
             <div>
               <h1>Hello!</h1>
-              {misc && misc !== null && (
-                <p>{misc.bio}</p>
-                // ------Scroll-animation-----
-                //     {/* <Skills>
-                //   <ul className="Home-skill-primary">
-                //     {misc.skills.map((skill) => (
-                //       <li className="Home-skill-item" key={skill}>
-                //         {skill}
-                //       </li>
-                //     ))}
-                //   </ul>
-                //   <ul className="Home-skill-secondary">
-                //     {misc.skills.map((skill) => (
-                //       <li className="Home-skill-item" key={skill}>
-                //         {skill}
-                //       </li>
-                //     ))}
-                //   </ul>
-                // </Skills> */}
-              )}
+              {misc && misc !== null && <p>{misc.bio}</p>}
               <PrimaryButton type='button' onClick={handleClick}>
                 Contact me!
               </PrimaryButton>
