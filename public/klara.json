@@ -37,7 +37,8 @@
         "Express",
         "GraphQL",
         "Databases",
-        "Agile development"
+        "Agile development",
+        "C++"
       ]
     }
   },
@@ -46,8 +47,8 @@
     {
       "id": "CMSportfolio",
       "name": "Portfolio",
-      "shortdescription": "Portfolio created using Contenful and Gatsby",
-      "description": "This portfolio was created using Contenful Gatsby to develop skills in Headless CMS and GraphQL.",
+      "shortdescription": "Portfolio created using Contentful and Gatsby",
+      "description": "This portfolio was created using Contenful in combination with Gatsby to develop skills in Headless CMS and GraphQL.",
       "image": "/images/portfolio.png",
       "url": "https://klarabryntesson.netlify.app/",
       "languages": [
@@ -55,7 +56,7 @@
         "CSS",
         "Typescript",
         "React",
-        "Contenful",
+        "Contentful",
         "GraphQL",
         "Node.js"
       ],
