@@ -48,7 +48,7 @@
       "id": "CMSportfolio",
       "name": "Portfolio",
       "shortdescription": "Portfolio created using Contentful and Gatsby",
-      "description": "This portfolio was created using Contenful in combination with Gatsby to develop skills in Headless CMS and GraphQL.",
+      "description": "This portfolio was created using Contentful in combination with Gatsby to develop skills in Headless CMS and GraphQL.",
       "image": "/images/portfolio.png",
       "url": "https://klarabryntesson.netlify.app/",
       "languages": [
