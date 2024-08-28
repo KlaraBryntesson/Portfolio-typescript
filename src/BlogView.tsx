@@ -80,10 +80,6 @@ function BlogView() {
     }
   }
 
-  useEffect(() => {
-    console.log(posts);
-  }, [posts]);
-
   return (
     <AnimatePresence>
       <motion.div

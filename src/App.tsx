@@ -55,11 +55,9 @@ function App() {
     if (theme === 'dark') {
       body?.classList.remove('light');
       body?.classList.add('dark');
-      console.log('Temat är ', theme);
     } else {
       body?.classList.remove('dark');
       body?.classList.add('light');
-      console.log('Temat är ', theme);
     }
   }, [theme]);
 

@@ -22,25 +22,6 @@ function NavBar() {
     }
   });
 
-  // ---Funktioner till hamburgermeny som jag skrotade---
-  // const [showNav, setShowNav] = useState(false),
-  //   location = useLocation();
-
-  // function toggleNavbar() {
-  //   setShowNav(!showNav);
-  // }
-
-  // function handleOpen() {
-  //   toggleNavbar();
-  // }
-  // function handleClose() {
-  //   toggleNavbar();
-  // }
-
-  // useEffect(() => {
-  //   setShowNav(false);
-  // }, [location]);
-
   return (
     <div className='NavBar'>
       <div className='NavBar-top'>
@@ -53,13 +34,8 @@ function NavBar() {
                 checked={isChecked}
                 onChange={(event) => setChecked(event.target.checked)}
               />
-              <span className='slider'></span>
+              <span className='slider' />
             </Toggle>
-            {/* {showNav ? (
-            <Icon.XLg onClick={handleClose} className="bi bi-x-lg"></Icon.XLg>
-          ) : (
-            <Icon.List onClick={handleOpen} className="bi bi-list" />
-          )} */}
           </div>
         </header>
         <nav>
@@ -74,31 +50,9 @@ function NavBar() {
                 About
               </Link>
             </li>
-            {/* <li>
-              <Link className='NavBar-links' to='/blog'>
-                Blog
-              </Link>
-            </li> */}
           </ul>
         </nav>
       </div>
-      {/* <div className="NavBar-navbar">
-        {showNav && (
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-            </ul>
-          </nav>
-        )}
-      </div> */}
       <div className='NavBar-navbar-left'>
         {details && details !== null && (
           <div className='NavBar-icons'>
@@ -165,12 +119,41 @@ const Toggle = styled.label`
     transition: 0.4s;
   }
 
+  .slider:hover:before {
+    animation: twitch-left 0.3s ease;
+  }
+
+  input:checked + .slider:hover:before {
+    animation: twitch-right 0.3s ease;
+  }
+
+  @keyframes twitch-left {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+  }
+
+  @keyframes twitch-right {
+    0%,
+    100% {
+      transform: translateX(20px);
+    }
+    50% {
+      transform: translateX(18px);
+    }
+  }
+
   input:checked + .slider {
     background-color: rgb(254, 105, 5);
   }
 
   input:checked + .slider:before {
     transform: translateX(20px);
+    animation: transform 0.5s ease;
   }
 
   @media (max-width: 700px) {

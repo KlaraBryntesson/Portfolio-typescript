@@ -1,4 +1,3 @@
-// import './Home.css';
 import * as Icon from 'react-bootstrap-icons';
 import WorkList from './WorkList';
 import Contact from './ContactComponent';
@@ -24,8 +23,6 @@ function Home() {
     misc = useContext(SomeContext)?.misc,
     projects = useContext(SomeContext)?.work;
 
-  // const details = useContext(SomeContext)?.details;
-
   function handleClick() {
     const element = document.querySelector(`#${contactId}`);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -43,7 +40,6 @@ function Home() {
         },
       });
     }
-    console.log('elementet syns', isInView);
   }, [isInView]);
 
   return (

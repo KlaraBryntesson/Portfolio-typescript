@@ -10,7 +10,7 @@
       "image": ["/images/IMG_1215.jpg"]
     },
     "misc": {
-      "bio": "I am a dedicated and enthusiastic frontend developer student with a passion for creating intuitive and visually appealing user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I constantly want to expanding my skillset and explore new frameworks and technologies to stay on the cutting edge of web development.",
+      "bio": "I am a dedicated and enthusiastic frontend developer with a passion for creating intuitive and visually appealing user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I constantly want to expanding my skillset and explore new frameworks and technologies to stay on the cutting edge of web development.",
       "introdescription": "My name is Klara. I like to create websites and solve problems.",
       "description": [
         "I'm a frontend developer with a diverse set of skills and experiences that enable me to create beautiful and functional web applications. With a background in textile design and product development, I bring a unique perspective to the table that allows me to approach problems with creativity and attention to detail.",
@@ -32,8 +32,9 @@
         "React",
         "Node.js",
         "Git",
-        "Headless CMS",
+        "Headless-CMS",
         "Wordpress",
+        "PHP",
         "Express",
         "GraphQL",
         "Databases",
@@ -57,6 +58,7 @@
         "Typescript",
         "React",
         "Contentful",
+        "Styled-components",
         "GraphQL",
         "Node.js"
       ],

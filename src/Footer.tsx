@@ -23,10 +23,6 @@ function Footer(props: FooterProps) {
     }
   }, [loggedIn]);
 
-  useEffect(() => {
-    console.log(props.path);
-  }, [props.path]);
-
   return (
     <FooterDiv>
       {showLogin && !isLoggedIn && <LoginComponent />}

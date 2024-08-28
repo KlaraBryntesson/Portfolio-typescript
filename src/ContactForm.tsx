@@ -1,74 +1,82 @@
 import { useState, useContext } from 'react';
+import emailjs from '@emailjs/browser';
 import PrimaryButton from './PrimaryButton';
 import styled from 'styled-components';
 import { SomeContext } from './SomeContext';
 import { MyComponentProps } from './App';
 
 function ContactForm() {
-  const [name, setName] = useState(''),
-    [email, setEmail] = useState(''),
-    [phone, setPhone] = useState(''),
-    [showError, setShowError] = useState(false),
+  const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      message: '',
+    }),
     [showSuccess, setShowSuccess] = useState(false),
     theme = useContext(SomeContext)?.theme;
 
-  function handleSubmit() {
-    if (name === '' || email === '' || phone === '') {
-      setShowError(true);
-      setTimeout(() => {
-        setShowError(false);
-      }, 3000);
-    } else {
-      setShowSuccess(true);
-      setTimeout(() => {
-        setShowSuccess(false);
-      }, 3000);
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const serviceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID ?? '';
+    const templateID: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID ?? '';
+    const publicKey: string = process.env.REACT_APP_EMAILJS_PUBLIC_KEY ?? '';
+
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Fill in all required fields before sending.');
+      return;
     }
-  }
+
+    // Use emailjs to send the email
+    if (serviceID && templateID && publicKey) {
+      emailjs
+        .send(serviceID, templateID, formData, publicKey)
+        .then((response) => {
+          setShowSuccess(true);
+        })
+        .catch((error) => {
+          alert('Something went wrong! Please try again');
+        });
+    }
+  };
 
   return (
     <>
-      <FormDiv
-        ThemeColor={theme === 'light' ? 'rgb(42, 42, 42)' : 'antiquewhite'}
-        onSubmit={handleSubmit}
-      >
-        <label>
-          Name
-          <input
-            onChange={(event) => setName(event.target.value)}
-            value={name}
-            required
-          />
-        </label>
-        <label>
-          Email
-          <input
-            type='email'
-            onChange={(event) => setEmail(event.target.value)}
-            value={email}
-            required
-          />
-        </label>
-        <label>
-          Phone
-          <input
-            type='tel'
-            onChange={(event) => setPhone(event.target.value)}
-            value={phone}
-            required
-          />
-        </label>
-        <PrimaryButton type='submit'>Send Inquiry</PrimaryButton>
-        {showError && (
-          <p className='Contact-message'>All fields must be filled in!</p>
-        )}
-        {showSuccess && (
-          <p className='Contact-message'>Thank you for your inquiry!</p>
-        )}
-      </FormDiv>
+      {showSuccess ? (
+        <SuccessText>Thank you for your inquiry!</SuccessText>
+      ) : (
+        <FormDiv
+          ThemeColor={theme === 'light' ? 'rgb(42, 42, 42)' : 'antiquewhite'}
+          onSubmit={handleSubmit}
+        >
+          <label>
+            Name
+            <input name='name' onChange={handleChange} required />
+          </label>
+          <label>
+            Email
+            <input name='email' type='email' onChange={handleChange} required />
+          </label>
+          <label>
+            Message
+            <textarea name='message' onChange={handleChange} required />
+          </label>
+          <PrimaryButton type='submit'>Send Inquiry</PrimaryButton>
+        </FormDiv>
+      )}
     </>
   );
 }
+
+const SuccessText = styled.p`
+  margin: 0 !important;
+  padding: 1.5rem;
+  width: fit-content !important;
+`;
 
 const FormDiv = styled.form<MyComponentProps>`
   width: 100%;

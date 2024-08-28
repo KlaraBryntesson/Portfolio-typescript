@@ -29,12 +29,8 @@ function Work() {
       .then((response) => response.json())
       .then((result) => {
         setProjects(result.work);
-        console.log(result.work);
       });
   }, []);
-
-  console.log('Projects:', projects);
-  console.log(projectId);
 
   useEffect(() => {
     if (projects !== undefined) {

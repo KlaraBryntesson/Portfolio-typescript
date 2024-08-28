@@ -1,6 +1,6 @@
-// import ContactForm from './ContactForm';
 import styled from 'styled-components';
 import * as Icon from 'react-bootstrap-icons';
+import ContactForm from './ContactForm';
 
 type ContactProps = {
   id: string;
@@ -10,20 +10,20 @@ function ContactComponent(props: ContactProps) {
   return (
     <ContactDiv id={props.id}>
       <div>
-        <p>
+        {/* <p>
           Do you want to know more about me or have a business inquiry? Feel
           free to contact me through email and I will get back to you asap.
-        </p>
-        {/* <p>
-          Do you want to know more about me or have a business inquiry? Please
-          fill out your details and I will be in touch!
         </p> */}
+        <p>
+          Do you want to know more about me? Please fill out your details and I
+          will be in touch!
+        </p>
       </div>
-      <div className='mail-div'>
+      <MailDiv>
         <Icon.Envelope className='Contact-bi' />
-        <p className='mail-p'>k_bryntesson@hotmail.com</p>
-        {/* <ContactForm /> */}
-      </div>
+        {/* <p className='mail-p'>k_bryntesson@hotmail.com</p> */}
+        <ContactForm />
+      </MailDiv>
     </ContactDiv>
   );
 }
@@ -44,12 +44,6 @@ const ContactDiv = styled.div`
   p {
     width: 70%;
     margin: auto;
-  }
-
-  .mail-div {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .mail-p {
@@ -85,6 +79,13 @@ const ContactDiv = styled.div`
       width: 100%;
     }
   }
+`;
+
+const MailDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default ContactComponent;
