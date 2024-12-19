@@ -3,9 +3,11 @@ export interface Admin {
   password: string;
 }
 
+// Fake account to test the login functionality for the blog page
+
 export function Admin() {
   return {
-    userName: "klarabryntesson",
-    password: "secret",
+    userName: 'klarabryntesson',
+    password: 'secret',
   };
 }
