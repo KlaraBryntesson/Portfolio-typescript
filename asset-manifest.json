@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.986865de.css",
-    "main.js": "/static/js/main.d8ba39af.js",
+    "main.js": "/static/js/main.90987c89.js",
     "static/js/453.0a36081d.chunk.js": "/static/js/453.0a36081d.chunk.js",
     "static/media/Montserrat-Light.ttf": "/static/media/Montserrat-Light.6fcc9263a21be961d246.ttf",
     "static/media/NewYork PERSONAL USE.otf": "/static/media/NewYork PERSONAL USE.e934fc10a53877d377d0.otf",
@@ -9,11 +9,11 @@
     "static/media/NewYork PERSONAL USE.woff": "/static/media/NewYork PERSONAL USE.80b21abb3c98feba4d21.woff",
     "index.html": "/index.html",
     "main.986865de.css.map": "/static/css/main.986865de.css.map",
-    "main.d8ba39af.js.map": "/static/js/main.d8ba39af.js.map",
+    "main.90987c89.js.map": "/static/js/main.90987c89.js.map",
     "453.0a36081d.chunk.js.map": "/static/js/453.0a36081d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.986865de.css",
-    "static/js/main.d8ba39af.js"
+    "static/js/main.90987c89.js"
   ]
 }
