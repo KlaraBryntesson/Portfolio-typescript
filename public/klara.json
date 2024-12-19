@@ -25,20 +25,23 @@
       "skills": [
         "HTML",
         "CSS",
-        "UX/UI-Design",
-        "Vue.js",
-        "VITE",
-        "Typescript",
         "React",
-        "Node.js",
-        "Git",
+        "Typescript",
+        "UX/UI",
+        "React Native",
+        "Vue",
+        "VITE",
         "Headless-CMS",
+        "Figma",
+        "GraphQL",
+        "Firebase",
+        "Node",
+        "Git",
         "Wordpress",
         "PHP",
         "Express",
-        "GraphQL",
-        "Databases",
-        "Agile development",
+        "SQL",
+        "Agile methods",
         "C++"
       ]
     }
@@ -71,7 +74,16 @@
       "description": "A group project created during four weeks in combination with working in an agile team with two week sprints. For this project, we made our own mockup API using json to fetch from. We also implemented a login function using Vuex and Vuex persist to make the user information persist on that specific device. This was the closest thing to using a backend that we could get. This project experiments with a few different npm packages to get to know their functions and usages",
       "image": "/images/urbangreens.png",
       "url": "/urbangreens",
-      "languages": ["Javascript", "Vue", "VITE", "Bootstrap", "Node.js", "Git"],
+      "languages": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Vue",
+        "VITE",
+        "Bootstrap",
+        "Node.js",
+        "Git"
+      ],
       "participants": [
         "Ellinor Sahberg",
         "Isabell Leosson",
@@ -86,7 +98,14 @@
       "description": "This project was a joint effort with teams of frontend developers and UX designers to create and deploy a web application using both backend and frontend.",
       "image": "/images/eventer.png",
       "url": "https://eventer.onrender.com/",
-      "languages": ["Typescript", "React", "Express", "PostgreSQL"],
+      "languages": [
+        "HTML",
+        "CSS",
+        "Typescript",
+        "React",
+        "Express",
+        "PostgreSQL"
+      ],
       "participants": [
         "Anna Petersson",
         "Ellen Persson",

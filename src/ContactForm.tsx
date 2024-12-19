@@ -36,9 +36,11 @@ function ContactForm() {
       emailjs
         .send(serviceID, templateID, formData, publicKey)
         .then((response) => {
+          console.log(response);
           setShowSuccess(true);
         })
         .catch((error) => {
+          console.error(error);
           alert('Something went wrong! Please try again');
         });
     }
